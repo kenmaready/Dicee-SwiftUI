@@ -18,13 +18,13 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             VStack {
                 Image("diceeLogo")
-                    .resizable()
                     .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 Spacer()
                 HStack {
                     Die(num: diceOne)
                     Die(num: diceTwo)
                 }.padding(.all)
+                Spacer()
                 Spacer()
                 Button(action: {
                     self.diceOne = Int.random(in: 1...6)
